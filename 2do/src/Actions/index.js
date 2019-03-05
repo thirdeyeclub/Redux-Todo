@@ -1,9 +1,10 @@
 
-export const TODO = 'TODO';
+export const ADD_TODO = 'ADD_TODO';
 
-export const add2do = newTodo => {
+export const add2do = todo => {
     return{
-        type: TODO,
-        payload: newTodo}
+        type: ADD_TODO,
+        payload: todo};
     
-}
+};
+ 

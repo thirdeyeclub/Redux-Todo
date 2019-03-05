@@ -3,25 +3,28 @@ import {add2Do} from '../Actions/index';
 import {connect} from 'react-redux';
 
 class List extends React.Component{
+    constructor(){
+        super();
     state = {
         todo: ''
-    };
+    };}
 
     handleChange = i => {
         this.setState({todo: i.target.value});
     }
 
     render(){
-       <div>
-        <ul>
+       
             {props.todo.map((todo) => {
                  return (
+                    <div>
+                    <ul>
                     <li key={todo.id}>
                         <p>{todo.value}</p>
                     </li>
                     ) })}
         </ul>
-        <input> eohfoioiqoiefoiqfoi </input>
+        <input> </input>
        </div>
     }
 }

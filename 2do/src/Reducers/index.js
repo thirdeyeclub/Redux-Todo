@@ -1,4 +1,4 @@
-import {TODO} from '../Actions/index';
+import {ADD_TODO} from '../Actions/index';
 
 const initialState = { 
     title: "Taylor's ToDo List 3001"
@@ -7,10 +7,12 @@ const initialState = {
 
 function reducer(state = initialState, action){
     switch(action.type){
-        case TODO: return{
+        case ADD_TODO: return{
             ...state,
             todo: action.payload
         }
+        default:
+        return state
     }
 }
 
