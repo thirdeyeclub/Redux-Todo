@@ -6,4 +6,4 @@ export const add2do = newTodo => {
         type: TODO,
         payload: newTodo}
     
-;}
+}

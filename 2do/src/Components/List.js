@@ -13,7 +13,15 @@ class List extends React.Component{
 
     render(){
        <div>
-
+        <ul>
+            {props.todo.map((todo) => {
+                 return (
+                    <li key={todo.id}>
+                        <p>{todo.value}</p>
+                    </li>
+                    ) })}
+        </ul>
+        <input> eohfoioiqoiefoiqfoi </input>
        </div>
     }
 }
