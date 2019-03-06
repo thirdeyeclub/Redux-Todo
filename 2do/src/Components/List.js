@@ -11,7 +11,16 @@ max-width: 420px;
 margin: 13% auto;
 position: flex;
 color: '';
-font-family: 'Times New Roman', Times, serif;`
+font-family: 'Times New Roman', Times, serif;
+border-top: solid  #ffffff 20px;
+border-right: solid  #909090  20px;
+border-bottom: solid  #424242 15px;
+border-left: solid #FFFFFF 30px;
+border-radius: 33px;
+box-shadow: ;
+box-shadow: 49px 64px 89px 5px rgba(0,0,0,0.75),-59px -69px 300px 24px rgba(194,194,81,1);
+padding: 1.8% 1.8%;
+`
 const Button = styled.button`
 
 margin: 20px 0px;
