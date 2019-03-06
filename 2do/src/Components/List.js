@@ -1,6 +1,22 @@
 import React from 'react';
 import {add2Do} from '../Actions/index';
 import {connect} from 'react-redux';
+import styled from 'styled-components';
+
+//styles
+const UberList = styled.div `
+display: flex;
+flex-direction: column;
+max-width: 420px;
+margin: 13% auto;
+position: flex;
+color: '';
+font-family: 'Times New Roman', Times, serif;`
+const Button = styled.button`
+
+margin: 20px 0px;
+width: 420px;`
+//adios!
 
 class List extends React.Component{
     constructor(){
@@ -17,28 +33,31 @@ class List extends React.Component{
         i.preventDefault();
         this.props.add2Do(this.state.todo);
         this.setState({
-          todo: ""
+        todo: ""
         });
     };
 
     render() {
-       return (
-        <div className="form-list">
+    return (
+        <UberList>
             <h1>Todo List 2.0</h1>
-            <input type="text" name="todo" onChange={this.handleChange}
-            placeholder="...add new" value={this.state.todo}/>
-        <button onClick={this.handleNew}>ADD</button>
-        </div>    
+            <input 
+            type="text" 
+            name="todo" 
+            onChange={this.handleChange}
+            placeholder="...add new" 
+            value={this.state.todo}/>
+        <Button onClick={this.handleNew}>ADD</Button>
+        </UberList>    
                     
                 );}
                 }
-       
+
     
 const mapStateToProps = state => ({
-  todo: state.todo
+todo: state.todo
 });
 
 export default connect(mapStateToProps, {
-    add2Do
-  })(List);
+    add2Do})(List);
 
