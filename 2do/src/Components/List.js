@@ -13,21 +13,30 @@ class List extends React.Component{
         this.setState({todo: i.target.value});
     }
 
-    render(){
+    handleNew = i => {
+        i.preventDefault();
+        this.props.add2Do(this.state.todo);
+        this.setState({
+          todo: ""
+        });
+    };
+
+    render() {
+       return (
+        <div className="form-list">
+            <h1>Todo List 2.0</h1>
+            <input type="text" name="todo" onChange={this.handleChange}
+            placeholder="...add new" value={this.state.todo}/>
+        <button onClick={this.handleNew}>ADD</button>
+        </div>    
+                    
+                );}
+                }
        
-            {props.todo.map((todo) => {
-                 return (
-                    <div>
-                    <ul>
-                    <li key={todo.id}>
-                        <p>{todo.value}</p>
-                    </li>
-                    ) })}
-        </ul>
-        <input> </input>
-       </div>
-    }
-}
+    
+const mapStateToProps = state => ({
+  todo: state.todo
+});
 
 export default connect(mapStateToProps, {
     add2do
