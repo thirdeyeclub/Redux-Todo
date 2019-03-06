@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 class List extends React.Component{
     constructor(){
         super();
-    state = {
+    this.state = {
         todo: ''
     };}
 
@@ -39,6 +39,6 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, {
-    add2do
+    add2Do
   })(List);
 
